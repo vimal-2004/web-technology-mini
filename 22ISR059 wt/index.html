@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form for Farmers and Buyers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #e9ecef;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+    .login-container {
+      max-width: 450px;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .login-title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: bold;
+      color: #343a40;
+    }
+    .form-label {
+      font-weight: 600;
+    }
+    .form-control {
+      border-radius: 50px;
+      padding-left: 20px;
+    }
+    .login-btn, .signup-btn {
+      width: 100%;
+      border-radius: 50px;
+      padding: 10px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .login-btn:hover, .signup-btn:hover {
+      transform: translateY(-2px);
+    }
+    .divider {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .divider span {
+      background-color: #fff;
+      padding: 0 10px;
+      position: relative;
+      top: -12px;
+    }
+    .divider:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #ced4da;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2 class="login-title">Login</h2>
+    
+    <form id="loginForm">
+      <!-- Email input -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+      </div>
+
+      <!-- Password input -->
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+      </div>
+
+      <!-- Farmer login button -->
+      <button type="submit" class="btn btn-success login-btn mb-2" id="loginFarmer">Login as Farmer</button>
+
+      <!-- Buyer login button -->
+      <button type="submit" class="btn btn-primary login-btn mb-2" id="loginBuyer">Login as Buyer</button>
+
+      <!-- Sign up buttons -->
+      <div class="divider"><span>or</span></div>
+
+      <!-- Farmer sign-up button -->
+      <button type="button" class="btn btn-outline-success signup-btn mb-2" id="signupFarmer">Sign Up as Farmer</button>
+
+      <!-- Buyer sign-up button -->
+      <button type="button" class="btn btn-outline-primary signup-btn mb-2"  id="signupBuyer">Sign Up as Buyer</button>
+    </form>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('loginFarmer').addEventListener('click', function(e) {
+      e.preventDefault();
+      login('farmer');
+    });
+
+    document.getElementById('loginBuyer').addEventListener('click', function(e) {
+      e.preventDefault();
+      login('buyer');
+    });
+
+    document.getElementById('signupFarmer').addEventListener('click', function() {
+      window.location.href = '/signup?role=farmer';
+    });
+
+    document.getElementById('signupBuyer').addEventListener('click', function() {
+      window.location.href = '/signup?role=buyer';
+    });
+
+    function login(role) {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      fetch('/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email, password, role })
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          alert(`${role} login successful`);
+       
+        } else {
+          alert('Login failed');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    }
+  </script>
+</body>
+</html>

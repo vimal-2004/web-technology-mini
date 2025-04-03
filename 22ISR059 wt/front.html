@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direct Market Access for Farmers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    
+    .video-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+   
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .content {
+      max-width: 800px;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+
+    .content h1 {
+      font-size: 3rem;
+    }
+
+    .btn-custom {
+      margin: 20px;
+      padding: 15px 30px;
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <video autoplay muted loop class="video-bg">
+    <source src="back.mp4" type="video/mp4"> 
+    Your browser does not support HTML5 video.
+  </video>
+
+
+  <div class="overlay">
+    <div class="content">
+      <h1>Direct Market Access for Farmers</h1>
+      <p>Sell your produce directly to buyers with ease and get better prices for your hard work.</p>
+      
+    
+      
+      <div>
+        <a href="farmlog.html" class="btn btn-primary btn-lg btn-custom">Login as Farmer</a>
+        <a href="buyerlogin.html" class="btn btn-success btn-lg btn-custom">Login as Buyer</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

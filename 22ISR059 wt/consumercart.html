@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for the cards */
+        .card {
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none; /* Remove card border */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+            text-align: center; /* Center-align text */
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Hover effect to scale card */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+        }
+
+        /* Customizing buttons */
+        .btn-primary {
+            background-color: #28a745; /* Change button color */
+            border: none;
+            transition: background-color 0.2s, transform 0.2s; /* Smooth transitions */
+        }
+
+        .btn-primary:hover {
+            background-color: #218838; /* Darken on hover */
+            transform: translateY(-3px); /* Lift button on hover */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+        }
+
+        /* Custom CSS for product titles */
+        .card-title {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: #333;
+        }
+
+        .card-text {
+            color: #777; /* Muted color for descriptions */
+        }
+
+        /* Image adjustments */
+        .card-img-top {
+            width: 100%; /* Make the image take full width of the card */
+            height: 200px; /* Set a fixed height for all images */
+            object-fit: cover; /* Ensure the image covers the space without distortion */
+            border-bottom: 1px solid #ddd; /* Add bottom border to image */
+        }
+
+        /* Spacing and layout improvements */
+        body {
+            background-color: #f8f9fa; /* Light background color */
+        }
+
+        h1 {
+            color: #28a745; /* Title color matching agriculture theme */
+            font-size: 2.5rem; /* Larger font size for title */
+        }
+
+        /* Adjust margins and padding */
+        .container {
+            margin-top: 40px;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        /* Styling the price */
+        .text-success {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        /* Mobile-friendly adjustments */
+        @media (max-width: 768px) {
+            .container {
+                margin-top: 20px;
+            }
+            h1 {
+                font-size: 2rem; /* Smaller font for mobile */
+            }
+            .card-title {
+                font-size: 1.1rem; /* Reduce size of card titles on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Agriculture Products</h1>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+            <!-- Start of Item 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="onion.jpeg" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Onion</h5>
+                        <p class="card-text">onion is good for eyes</p>
+                        <p class="text-success">RS:15.00</p>
+                        <a href="checkcart.html" class="btn btn-primary" onclick="addToCart('Product Name 1', 15.00)">Add to Cart</a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- End of Item 1 -->
+
+            <!-- Item 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="tomato.jpeg" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">tomatto</h5>
+                        <p class="card-text">Description of product 2.</p>
+                        <p class="text-success">RS:20.00</p>
+                        <a href="checkcart.html" class="btn btn-primary" onclick="addToCart('Product Name 1', 15.00)">Add to Cart</a>
+
+                    </div>
+                </div>
+            </div>
+
+          
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="brinjal.jpeg" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Product Name 10</h5>
+                        <p class="card-text">Description of product 10.</p>
+                        <p class="text-success">RS:45.00</p>
+                        <a href="checkcart.html" class="btn btn-primary" onclick="addToCart('Product Name 1', 15.00)">Add to Cart</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 11 (Example for another card to complete) -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="cucu.jpeg" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Product Name 11</h5>
+                        <p class="card-text">Description of product 11.</p>
+                        <p class="text-success">RS:50.00</p>
+                        <a href="checkcart.html" class="btn btn-primary" onclick="addToCart('Product Name 1', 15.00)">Add to Cart</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                  <img src="bottle.jpeg" class="card-img-top" alt="Product Image">
+                  <div class="card-body">
+                      <h5 class="card-title">Product Name 10</h5>
+                      <p class="card-text">Description of product 10.</p>
+                      <p class="text-success">RS:45.00</p>
+                      <a href="checkcart.html" class="btn btn-primary" onclick="addToCart('Product Name 1', 15.00)">Add to Cart</a>
+
+                  </div>
+              </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+                <img src="pump.jpeg" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title">Product Name 10</h5>
+                    <p class="card-text">Description of product 10.</p>
+                    <p class="text-success">RS:45.00</p>
+                    <a href="checkcart.html" class="btn btn-primary" onclick="addToCart('Product Name 1', 15.00)">Add to Cart</a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+              <img src="cocunu.jpeg" class="card-img-top" alt="Product Image">
+              <div class="card-body">
+                  <h5 class="card-title">Product Name 10</h5>
+                  <p class="card-text">Description of product 10.</p>
+                  <p class="text-success">RS:45.00</p>
+                  <a href="checkcart.html" class="btn btn-primary" onclick="addToCart('Product Name 1', 15.00)">Add to Cart</a>
+
+              </div>
+          </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+            <img src="brinjal.jpeg" class="card-img-top" alt="Product Image">
+            <div class="card-body">
+                <h5 class="card-title">Product Name 10</h5>
+                <p class="card-text">Description of product 10.</p>
+                <p class="text-success">RS:45.00</p>
+                <a href="checkcart.html" class="btn btn-primary" onclick="addToCart('Product Name 1', 15.00)">Add to Cart</a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+          <img src="snake.jpeg" class="card-img-top" alt="Product Image">
+          <div class="card-body">
+              <h5 class="card-title">Product Name 10</h5>
+              <p class="card-text">Description of product 10.</p>
+              <p class="text-success">RS:45.00</p>
+              <a href="checkcart.html" class="btn btn-primary" onclick="addToCart('Product Name 1', 15.00)">Add to Cart</a>
+
+          </div>
+      </div>
+  </div>
+
+          <!------->
+                </div>
+    </div>
+
+    <div class="container">
+        <h1 class="text-center mb-4">Agriculture Products</h1>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="cart-container">
+          <!-- Items will be inserted here dynamically -->
+        </div>
+      </div>
+    <script>
+        function addToCart(productName, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            // Check if the product already exists in the cart
+            let existingProduct = cart.find(item => item.name === productName);
+            
+            if (existingProduct) {
+                existingProduct.quantity += 1; // Increase quantity if it already exists
+            } else {
+                cart.push({ name: productName, price: price, quantity: 1 }); // Add new product
+            }
+            
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(productName + " added to cart!");
+        }
+
+        // Function to dynamically display products in the cart
+  function displayCartItems() {
+    const cartContainer = document.getElementById('cart-container');
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Clear existing items
+    cartContainer.innerHTML = '';
+
+    // Iterate over the cart and create card elements
+    cart.forEach((item, index) => {
+      const productCard = `
+        <div class="col">
+          <div class="card h-100">
+            <img src="${item.image || 'default-image.jpg'}" class="card-img-top" alt="Product Image">
+            <div class="card-body">
+              <h5 class="card-title">${item.name}</h5>
+              <p class="card-text">${item.description}</p>
+              <p class="text-success">RS:${item.price}</p>
+              <a href="#" class="btn btn-primary" onclick="addToCart('${item.name}', ${item.price})">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      `;
+      cartContainer.insertAdjacentHTML('beforeend', productCard);
+    });
+  }
+
+  // Call the function on page load
+  document.addEventListener('DOMContentLoaded', displayCartItems);
+
+    </script>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmers' Website</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body class="bg-success">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="th.jpg" class="img-thumbnail rounded-circle" alt="Sri Chennimalaiandavar Agro Agency" style="width: 70px; height: 70px;">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">Services</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProducts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Products
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
+            <li><a class="dropdown-item" href="#products">All Products</a></li>
+            <li><a class="dropdown-item" href="price.html">Price Table</a></li>
+            <li><a class="dropdown-item disabled" href="#machinery">Machinery</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="front.html">front</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<section class="jumbotron text-center" style="background-image: url('h1.jpg'); background-size: cover; background-position: center; height: 600px;">
+  <h1 class="animated-text">Welcome to Framers page</h1>
+  <p class="lead">Your source for quality agricultural products and services.</p>
+  <a href="#services" class="btn btn-success">Explore Services</a>
+</section>
+
+
+
+<section id="services" class="bg-success py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Services</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="s11.jpg" class="card-img-top" alt="Service 1">
+          <div class="card-body">
+            <h5 class="card-title">My Products</h5>
+            <p class="card-text">you can see your .</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <a href="forms.html"></a><img src="s2.jpg" class="card-img-top" alt="Service 2">
+          <div class="card-body">
+            <a href="farmupload.html"><h5 class="card-title">Add New Products</h5></a>
+          
+            <p class="card-text">You can Add Your New products Here</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="card">
+          <a href="labours.html"><img src="lab.jpg" class="card-img-top" alt="Service 3"></a>
+          <div class="card-body">
+            <a href="labours.html"><h5 class="card-title">Labours recruitment</h5></a>
+            <p class="card-text">We provide good  Agricultre employees for you</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="products" class="container">
+  <h2 class="text-center mb-4"> Products & Machinery</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="p1.jpg" class="card-img-top" alt="Product 1">
+        <div class="card-body">
+          <h5 class="card-title">Seeds</h5>
+          <p class="card-text">High-quality seeds for a variety of crops.</p>
+          <a href="cart.html" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="s3.jpg" class="card-img-top" alt="Product 2">
+        <div class="card-body">
+          <h5 class="card-title">Fertilizers</h5>
+          <p class="card-text">Nutrient-rich fertilizers for improved crop yield.</p>
+          <a href="c2.html" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="pp3.jpg" class="card-img-top" alt="Product 3">
+        <div class="card-body">
+          <h5 class="card-title">Machinery</h5>
+          <p class="card-text">Modern farm machinery to boost productivity.</p>
+          <a href="c3.html" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+  click
+</a>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Our Services</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      <img src="s11.jpg" class="card-img-top" alt="Service 1">
+      <img src="s2.jpg" class="card-img-top" alt="Service 2">
+      <img src="s3.jpg" class="card-img-top" alt="Service 3">
+      
+    </div>
+    <br><br-->
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            about paddy
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">paddy, small, level, flooded field used to cultivate rice in southern and eastern Asia. Wet-rice cultivation is the most prevalent method of farming in the Far East, where it utilizes a small fraction of the total land yet feeds the majority of the rural population</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            About Groundnut
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Groundnuts are immensely rich in potassium, calcium, phosphorus and B vitamins which offers you with a host of health benefits. Groundnuts are a great blend of healthy fats, protein and fibre that curbs your appetite, lowers the risk of heart disease and regulates blood glucose levels.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            About cucumber
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Cucumber is a nutritious fruit with a high water content. Eating cucumber may help lower blood sugar, prevent constipation, and support weight loss. To maximize cucumber's health benefits, eat the peel, too. Though commonly thought to be a vegetable, cucumber is a fruit.</div>
+        </div>
+      </div>
+    </div>
+<h1> Yield table</h1>
+    <div class="progress">
+      <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+        25% paddy
+      </div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"> 56% Ground Nut</div>
+     
+    </div>
+    <div class="progress">
+      <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75% wheet</div>
+    
+    </div>
+    <div class="progress">
+      <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100% cucumber</div>
+    </div>
+    <div class="dropdown mt-3">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" href="price.html">Price</a></li>
+        <li><a class="dropdown-item" href="cart.html">Cart</a></li>
+        <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-light text-center py-3">
+  
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
